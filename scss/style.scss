@@ -1,0 +1,13 @@
+@import "normalize.scss";
+@import "mixins.scss";
+@import "global/fonts.scss";
+@import "404.scss";
+
+
+$mainfont: 'Proxima Nova Rg';
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

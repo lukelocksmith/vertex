@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>vertex</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" type="image/png" href="favicon.png">
+</head>
+<body>
+<header>
+		<div class="page-header clearfix">
+			<div class="page-header__logo">
+			<img src="img/logo.png" alt="">
+			</div>
+			<div class="page-header__nav">
+				<nav>
+					<ul class="main-nav__list">
+						<li class="main-nav__item"><a href="index.html">главная</a></li>
+						<li class="main-nav__item"><a href="vr.html">vr</a></li>
+						<li class="main-nav__item"><a class="active" href="about.html">услуги</a></li>
+						<li class="main-nav__item"><a href="contact.html">контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="scrolldown">
+			<div class="scrolldown__text">
+			<p>вниз</p>
+		</div>
+			<div class="scrolldown__img"><img src="img/scroll_icon.png" alt=""></div>
+		<div class="social">
+					<ul class="social__list">
+						<li class="social__item decoration-line"></li>
+						<li class="social__item instagram"><img src="img/instagram.svg" alt=""></li>
+						<li class="social__item vk"><a href="https://vk.com/vertexvr" target="_blank"><img src="img/vk.png" alt=""></a></li>
+						<li class="social__item mail"><img src="img/mail.png" alt=""></li>
+					</ul>
+				</div>
+	</header>
+	<div class="about">
+	<div class="about-devices__wrapper">
+		<div class="about-devices">
+		<h1>устройства</h1>
+		<img src="img/vive_logo.png" alt="">
+		<p>HTC vive - система виртуальной реальности<br>разработанная HTC совместно с Valve.<br>
+Большой угол обзора, высокое разрешение<br>и контроллеры движения позволяют<br>добиться наиболее полного погружения. 
+
+Vive имеет самую продвинутую систему<br>отслеживания движения на данный момент,<br>что позволят создать большую игровую<br>зону.</p>
+<span>01</span>
+		</div>
+	</div>
+<div class="about-games">
+	<div class="about-games__wrapper">
+		<h1>игры</h1>
+		<div class="about-games__list">
+			<div class="about-games__item">
+			<!-- <div class="prev"><h2>Space pirate</h2></div>-->			
+			<a href="http://store.steampowered.com/app/418650/?l=russian" target="_blank"><img src="img/games/153615-spacepirate.JPG" alt="" width="100%" height="100%"></a></div>
+			<div class="about-games__item">
+			<a href="http://store.steampowered.com/app/448280?l=russian" target="_blank">
+			<img src="img/games/Job-Simulator-PS3-1.png" alt="" width="100%" height="100%"></a></div>
+			<div class="about-games__item">
+			<a href="http://store.steampowered.com/app/440630?l=russian" target="_blank">
+			<img src="img/games/maxresdefault (1).jpg" alt="" width="100%" height="100%"></a></div>
+			<div class="about-games__item">
+			<a href="http://store.steampowered.com/app/436320?l=russian" target="_blank">
+			<img src="img/games/raw-data-key-image.jpg" alt="" width="100%" height="100%"></a></div>
+			<div class="about-games__item">
+			<a href="http://store.steampowered.com/app/471710?l=russian" target="_blank">
+			<img src="img/games/screen-shot-2016-08-09-at-2-09-59-pm.png" alt="" width="100%" height="100%"></a></div>
+			<div class="about-games__item">
+			<a href="http://store.steampowered.com/app/465240?l=russian" target="_blank">
+			<img src="img/games/SSVR_cover-2-1024x576.jpg" alt="" width="100%" height="100%"></a></div>
+			<div class="about-games__item" id="about-games__item-hidden">
+			<a href="http://store.steampowered.com/app/400940?l=russian" target="_blank">
+			<img src="img/games/budget-cuts-key-art.jpg" alt="" width="100%" height="100%"></a></div>
+			<div class="about-games__item" id="about-games__item-hidden1">
+			<a href="http://store.steampowered.com/app/486780?l=russian" target="_blank">
+			<img src="img/games/fruit-ninja-vr.jpg" alt="" width="100%" height="100%"></a></div>
+			<div class="about-games__item" id="about-games__item-hidden2">
+			<a href="http://store.steampowered.com/app/342180?l=russian" target="_blank">
+			<img src="img/games/maxresdefault.jpg" alt="" width="100%" height="100%"></a></div>
+		</div>
+	</div>
+	<div class="about-games__button">
+	<button onclick="stateChange()">load more</button>
+	</div>
+</div>
+	</div>
+<script>
+function stateChange() {
+	var obj = document.getElementById('about-games__item-hidden');
+	var obj1 = document.getElementById('about-games__item-hidden1');
+	var obj2 = document.getElementById('about-games__item-hidden2');
+
+	if (obj.style.display == "none" && obj.style.display == "none" && obj.style.display == "none") {
+		obj.style.display = "block";
+		obj1.style.display = "block";
+		obj2.style.display = "block";
+	}
+	else {
+		obj.style.display = "none";
+		obj1.style.display = "none";
+		obj2.style.display = "none";
+	}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta charset="UTF-8">
+	<title>vertex</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	 <script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
+	 <link rel="stylesheet" href="css/onepage-scroll.css">
+	 <script>
+	  $(document).ready(function(){
+      $(".main").onepage_scroll({
+        sectionContainer: "section",
+        responsiveFallback: 1000,
+        loop: true
+      });
+		});
+		
+	</script>
+</head>
+<body>
+	<header>
+		<div class="page-header clearfix">
+			<div class="page-header__logo">
+			<img src="img/logo.png" alt="">
+			</div>
+			<div class="page-header__nav">
+				<nav class="top-menu">
+					<ul class="main-nav__list">
+						<li class="main-nav__item"><a href="index.html">главная</a></li>
+						<li class="main-nav__item"><a class="active" href="vr.html">vr</a></li>
+						<li class="main-nav__item"><a href="about.html">услуги</a></li>
+						<li class="main-nav__item"><a href="contact.html">контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="scrolldown">
+			<div class="scrolldown__text">
+			<p>вниз</p>
+		</div>
+			<div class="scrolldown__img"><img src="img/scroll_icon.png" alt=""></div>
+		<div class="social">
+					<ul class="social__list">
+						<li class="social__item decoration-line"></li>
+						<li class="social__item instagram"><img src="img/instagram.svg" alt=""></li>
+					<li class="social__item vk"><a href="https://vk.com/vertexvr" target="_blank"><img src="img/vk.png" alt=""></a></li>
+						<li class="social__item mail"><img src="img/mail.png" alt=""></li>
+					</ul>
+				</div>
+	</header>
+	<div class="main">
+	<section id="main-page"><div class="main-page">
+	<div class="main-page__content">
+		<h1>погрузись в другую реальность вместе с vertex</h1>
+		<div class="cbuttom">
+		<ul class="cbuttom__list">
+			<li class="cbuttom__item cbuttom__text">прайс лист</li>
+			<li class="cbuttom__item cbuttom-decoration"></li>
+			<li class="cbuttom__item"><img src="img/cbuttom.png" alt=""></li>
+			<li class="cbuttom__item cbuttom-decoration"></li>
+			<li class="cbuttom__item cbuttom__text">прайс лист</li>
+		</ul>
+		</div>
+	</div>
+	<!-- <div class="main-page__adress clearfix">
+		<ul class="main-page__adress-list">
+			<li class="main-page__adress-text"><h2>алматы, ул. розыбакиева 123</h2></li>
+			<li class="main-page__adress-decoration"></li>
+		</ul>
+	</div> -->
+	</div></section>
+	<section id="about">
+	<div class="second-page">
+	<div class="second-page__wrapper">
+	<div class="second-page__text">
+	<p>Добро пожаловать в первый клуб виртуальной<br>реальности в городе
+</p>
+<p>Мы предлагаем вам опробовать совершенно новый тип<br>развлечений и испытать незабываемые ощущения<br> погружения в новую реальность.</p>
+</div>
+</div>
+	</div>
+	</section>
+		<section><div class="third-page">
+	<div class="third-page__wrapper">
+	<div class="third-page__text">
+	<p>Исследуйте виртуальные миры, выживайте в<br>зомби-апокалипсисе, сражайтесь с ордой монстров или<br>делайте виртуальные сэндвичи. В нашем клубе вы найдете<br>развлечения на любой вкус. 
+</p>
+<p>К вашим услугам системы виртуальной реальности<br>последнего поколения, лучшие доступные игры и контент,<br>а также качественный сервис.</p>
+</div>
+</div>
+	</div>
+	</section>
+	<section>
+				<div class="fourth-page">
+	<div class="fourth-page__wrapper">
+	<div class="fourth-page__text">
+	<p>Не обязательно быть любителем компьютерных игр,<br>не нужно запоминать комбинации клавиш или вникать<br>в быстро сменяющиеся изображения.<br><br>
+	Контроллеры движения позволяют добиться<br>естественного и интуитивно понятного<br>взаимодействия с виртуальным миром.</p>
+</div>
+</div>
+	</div>
+	</section>
+	</div>
+	<script>
+		var menu_selector = ".top-menu"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
+ 
+function onScroll(){
+    var scroll_top = $(document).scrollTop();
+    $(menu_selector + " a").each(function(){
+        var hash = $(this).attr("href");
+        var target = $(hash);
+        if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
+            $(menu_selector + " a.active").removeClass("active");
+            $(this).addClass("active");
+        } else {
+            $(this).removeClass("active");
+        }
+    });
+}
+ 
+$(document).ready(function () {
+ 
+    $(document).on("scroll", onScroll);
+ 
+    $("a[href^=#]").click(function(e){
+        e.preventDefault();
+ 
+        $(document).off("scroll");
+        $(menu_selector + " a.active").removeClass("active");
+        $(this).addClass("active");
+        var hash = $(this).attr("href");
+        var target = $(hash);
+ 
+        $("html, body").animate({
+            scrollTop: target.offset().top
+        }, 500, function(){
+            window.location.hash = hash;
+            $(document).on("scroll", onScroll);
+        });
+ 
+    });
+ 
+});
+	</script>
+</body>
+</html>		

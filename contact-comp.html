@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>vertex</title>
+	<link rel="stylesheet" href="css/comp.css">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+</head>
+<body>
+<header>
+		<div class="page-header clearfix">
+			<div class="page-header__logo">
+			<img src="img/logo.png" alt="">
+			</div>
+			<div class="page-header__nav">
+				<nav>
+					<ul class="main-nav__list">
+						<li class="main-nav__item"><a href="index.html">главная</a></li>
+                        <li class="main-nav__item"><a href="comp.html">и-кафе</a></li>
+                        <li class="main-nav__item"><a href="price.html">тарифы</a></li>
+                        <li class="main-nav__item"><a href="games.html">игры</a></li>
+                        <li class="main-nav__item"><a class="active" href="contact-comp.html">контакты</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="social">
+					<ul class="social__list">
+						<li class="social__item decoration-line"></li>
+						<li class="social__item instagram"><img src="img/instagram.svg" alt=""></li>
+						<li class="social__item vk"><a href="https://vk.com/vertexvr" target="_blank"><img src="img/vk.png" alt=""></a></li>
+						<li class="social__item mail"><img src="img/mail.png" alt=""></li>
+					</ul>
+				</div>
+	</header>
+	<div class="contact-page clearfix">
+<div class="contact">
+<div class="contact__wrapper">
+<div class="contact-address">
+		алматы, ул. каблукова 38а/1<br>
+		<a href="tel:+7 777 129 9032">+7 777 129 9032</a><br>
+		<a href="mailto:info@vertexvr.kz">info@vertexvr.kz</a>
+</div>
+<div class="contact-form">
+	<form id="contact_form" action="info@vertexvr.kz" method="POST" enctype="multipart/form-data">
+	<div class="tab">
+	<li class="list-block">
+		<input id="name" class="input" name="name" type="text" value="" size="30" placeholder="ИМЯ:" required />
+	</li>
+<li class="list-block">
+		<input id="email" type="email" class="input" name="email" type="text" value="" size="30" placeholder="EMAIL:" required />
+		<!-- <span class="form_hint">Майл должен выглядеть так "name@mail.com"</span> -->
+</li>
+	</div>
+<li>
+		<textarea id="message" class="input" name="message" rows="1" cols="74" placeholder="СООБЩЕНИЕ:" required></textarea><br />
+</li>
+<li class="button"><input id="submit_button" type="submit" value="ВЫСЛАТЬ" style="cursor: pointer;" /></li>
+</form>
+</div>
+</div>
+</div>
+<div id="map"></div>
+</div>
+ <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 43.212834, lng: 76.888234},
+          zoom: 15,
+          disableDefaultUI: true,
+          styles: [
+          {
+        "featureType": "all",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "saturation": 36
+            },
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 40
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 17
+            },
+            {
+                "weight": 1.2
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 20
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 21
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 17
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 29
+            },
+            {
+                "weight": 0.2
+            }
+        ]
+    },
+    {
+        "featureType": "road.arterial",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 18
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 16
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#000000"
+            },
+            {
+                "lightness": 19
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "color": "#0f252e"
+            },
+            {
+                "lightness": 17
+            }
+        ]
+    }]
+        });
+        var marker = new google.maps.Marker({
+    position: {lat: 43.212834, lng: 76.888234},
+    map: map,
+    icon: 'img/icon-comp.png'
+});
+      }
+    </script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJxa6G5x6mB9ngOj1B8jYSiLWqhDIrIrQ&callback=initMap"></script>
+
+</body>
+</html>
